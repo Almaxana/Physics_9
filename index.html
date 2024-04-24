@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.plot.ly/plotly-2.29.1.min.js" charset="utf-8"></script>
+    <style>
+        input[type="number"] {
+            width: 250px;
+            padding: 10px;
+        }
+    </style>
+    <title><Амплитудная модуляция></title>
+</head>
+
+<body>
+<form onsubmit="return CountFunction(this)" method ="post">
+    <label>Частота несущего сигнала (Гц) (для коректной работы должна быть больше частоты информационного):</label>
+    <input  type="number" min="0" max="100" step="0.01" id="w_nes">
+    <br><br>
+
+    <label>Частота информационного сигнала (Гц):</label>
+    <input type="number" min="0" max="100"  step="0.01" id="w_inf">
+    <br><br>
+
+    <label>Амплитуда несущего (В):</label>
+    <input type="number" min="0" max="100" step="0.01" id="U_nes">
+    <br><br>
+
+    <label>Амплитуда информационного (В):</label>
+    <input type="number" min="0" max="100" step="0.01" id="U_inf">
+    <br><br>
+
+    <input type="submit"  value="Построить график">
+</form>
+
+<div id="message"></div>
+<div id="myDiv_1"></div>
+<div id="myDiv_2"></div>
+<div id="myDiv_3"></div>
+<div id="myDiv_4"></div>
+<div id="myDiv_5"></div>
+<div id="myDiv_6"></div>
+<script src="index.js"></script>
+</body>
+
+</html>
